@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Transfer" max_length="40" name="x_41751_thomas_s_b_tranfer" type="collection">
+        <element label="Accepted By Driver" max_length="32" name="accepted_by" reference="x_41751_thomas_s_b_contacts" type="reference"/>
+        <element choice="3" label="Current Stage" max_length="80" name="current_stage" type="workflow">
+            <choice/>
+        </element>
+        <element label="Destination Location" max_length="32" name="destination" reference="x_41751_thomas_s_b_location_building" type="reference"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Shipping Provider" max_length="32" name="shipper" reference="x_41751_thomas_s_b_organization" reference_qual="type=shipping^EQ" reference_qual_condition="type=shipping^EQ" type="reference"/>
+        <element label="Source Location" max_length="32" name="source" reference="x_41751_thomas_s_b_location_building" type="reference"/>
+        <element choice="3" default="not_ready" label="Stage" max_length="40" name="stage" type="choice">
+            <choice>
+                <element label="Shipping Preparation" sequence="0" value="not_ready"/>
+                <element label="Ready to Ship" sequence="1" value="ready"/>
+                <element label="In Transit" sequence="2" value="in_transit"/>
+                <element label="Pending Delivery  - Issues" sequence="3" value="pending_delivery"/>
+                <element label="Delivered to Destination" sequence="4" value="delivered_to_destination"/>
+                <element label="Lost in Transit" sequence="100" value="lost_in_transit"/>
+            </choice>
+        </element>
+        <element label="Tracking ID" max_length="1000" name="tracking_id" type="string"/>
+        <element label="Transfer Notes" max_length="4000" name="transfer_notes" type="journal"/>
+        <element label="Transit Vehicle" max_length="32" name="transit_vehicle" reference="x_41751_thomas_s_b_transit_vehicle" type="reference"/>
+        <index name="index">
+            <element name="shipper"/>
+        </index>
+        <index name="index2">
+            <element name="destination"/>
+        </index>
+        <index name="index3">
+            <element name="accepted_by"/>
+        </index>
+        <index name="index4">
+            <element name="source"/>
+        </index>
+        <index name="index5">
+            <element name="transit_vehicle"/>
+        </index>
+    </element>
+</database>

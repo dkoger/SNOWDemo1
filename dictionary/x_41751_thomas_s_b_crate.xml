@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_41751_thomas_s_b_container" label="Crate" max_length="40" name="x_41751_thomas_s_b_crate" type="collection">
+        <element choice="1" label="Material" max_length="40" name="material" type="choice">
+            <choice>
+                <element label="Steel" sequence="0" value="Steel"/>
+                <element label="Wood" sequence="1" value="Wood"/>
+                <element label="Tyvex" sequence="2" value="Tyvex"/>
+                <element label="Plastic" sequence="3" value="Plastic"/>
+                <element label="Concrete" sequence="4" value="Concrete"/>
+            </choice>
+        </element>
+        <element label="Tools Required" max_length="40" name="tools_required" type="string"/>
+        <element label="Tools Required to Open" max_length="40" name="tools_required_to_open" type="boolean"/>
+        <element default="0.0" label="Total Weight (Kg)" max_length="20" name="total_weight" read_only="true" type="decimal"/>
+        <element label="Volume (cu.ft)" max_length="20" name="volume" type="decimal"/>
+        <element label="Waterproof" max_length="40" name="waterproof" type="boolean"/>
+        <element label="Weight (Kg)" max_length="20" name="weight" type="decimal"/>
+    </element>
+</database>

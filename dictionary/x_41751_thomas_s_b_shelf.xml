@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_41751_thomas_s_b_container" label="Shelf" max_length="40" name="x_41751_thomas_s_b_shelf" type="collection">
+        <element label="Area Description" max_length="1000" name="area" type="string"/>
+        <element choice="1" label="Type" mandatory="true" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Display Shelf" sequence="0" value="display"/>
+                <element label="Moving Cart" sequence="1" value="cart"/>
+                <element label="Stacks Shelf" sequence="2" value="stacks"/>
+                <element label="Back Room Shelf" sequence="3" value="backroom"/>
+                <element label="Other" sequence="4" value="other"/>
+            </choice>
+        </element>
+    </element>
+</database>

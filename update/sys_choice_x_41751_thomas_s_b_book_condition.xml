@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="condition" table="x_41751_thomas_s_b_book" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unevaluated</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:26:46</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>9db5c4f5db590300f5fc78eebf9619c7</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:28:06</sys_updated_on>
+            <value>unevaluated</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Unacceptable</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:27:19</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5ac5c4f5db590300f5fc78eebf96193d</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:28:20</sys_updated_on>
+            <value>unacceptable</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Fair</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:26:58</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5bb5c4f5db590300f5fc78eebf961932</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:28:23</sys_updated_on>
+            <value>fair</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Good</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:27:34</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>6bd588f5db590300f5fc78eebf9619d1</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:28:27</sys_updated_on>
+            <value>good</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Excellent</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:27:47</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5fe588f5db590300f5fc78eebf961962</sys_id>
+            <sys_mod_count>2</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:28:29</sys_updated_on>
+            <value>excellent</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>condition</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Mint</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_book</name>
+            <sequence>5</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:27:55</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>def5c0f5db590300f5fc78eebf96195f</sys_id>
+            <sys_mod_count>5</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:29:02</sys_updated_on>
+            <value>mint</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>condition</element>
+            <name>x_41751_thomas_s_b_book</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 16:26:46</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a9765ca40f23030026fb059ce1050ed1</sys_id>
+            <sys_mod_count>21</sys_mod_count>
+            <sys_name>condition</sys_name>
+            <sys_package display_value="Thomas's Book Depot" source="x_41751_thomas_s_b">487bafa9db190300f5fc78eebf9619b1</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Thomas's Book Depot">487bafa9db190300f5fc78eebf9619b1</sys_scope>
+            <sys_update_name>sys_choice_x_41751_thomas_s_b_book_condition</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 16:29:02</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_41751_thomas_s_b.cratetools</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>cratetools</name>
+        <script><![CDATA[var cratetools = Class.create();
+cratetools.prototype = {
+    initialize: function() {
+    },
+	updateweight: function(crate){
+		if(crate === undefined){
+			return;
+		}
+		
+		var startweight = crate.weight;
+		var bookweight = 0;
+		var subcrateweight = 0;
+		var books = [];
+		//start book searcher
+		var bookfinder = new GlideRecord('x_41751_thomas_s_b_book');
+		bookfinder.addQuery('container',crate.sys_id);
+		
+		//look for crates inside this crate
+		var containers = new GlideRecord('x_41751_thomas_s_b_container');
+		containers.addQuery('container',crate.sys_id);
+		containers.query();
+		while(containers.next()){
+			subcrateweight += containers.total_weight;			
+		}
+		bookfinder.query();
+		while(bookfinder.next()){
+			bookweight += bookfinder.weight;			
+		}
+		
+		crate.total_weight = startweight + bookweight + subcrateweight;
+		crate.update();
+		if(!crate.container.nil){
+			if(crate.container.sys_class_name == 'x_41751_thomas_s_b_crate')
+				this.updateweight(crate.container);
+		}
+	},
+
+    type: 'cratetools'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-19 20:32:41</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_id>92797cf1dbd90300f5fc78eebf9619ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>cratetools</sys_name>
+        <sys_package display_value="Thomas's Book Depot" source="x_41751_thomas_s_b">487bafa9db190300f5fc78eebf9619b1</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Thomas's Book Depot">487bafa9db190300f5fc78eebf9619b1</sys_scope>
+        <sys_update_name>sys_script_include_92797cf1dbd90300f5fc78eebf9619ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-19 20:35:39</sys_updated_on>
+    </sys_script_include>
+</record_update>

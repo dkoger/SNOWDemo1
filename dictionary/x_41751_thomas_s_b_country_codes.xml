@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Country Codes" max_length="40" name="x_41751_thomas_s_b_country_codes" type="collection">
+        <element label="ISO Code (2 digit)" max_length="40" name="iso_code_2digit" type="string"/>
+        <element label="ISO Code (3 digit)" max_length="40" name="iso_code_3digit" type="string"/>
+        <element display="true" label="Name" max_length="40" name="name" type="string"/>
+    </element>
+</database>

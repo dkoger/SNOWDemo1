@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Container" max_length="40" name="x_41751_thomas_s_b_container" type="collection">
+        <element label="Container" max_length="32" name="container" reference="x_41751_thomas_s_b_container" type="reference"/>
+        <element display="true" label="Container ID" max_length="100" name="container_id" type="string"/>
+        <element label="Description" max_length="400" name="description" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="x_41751_thomas_s_b_location" type="reference"/>
+        <element label="Location Building" max_length="32" name="location_building" reference="x_41751_thomas_s_b_location_building" type="reference"/>
+        <element choice="1" label="Location Type" mandatory="true" max_length="40" name="location_type" type="choice">
+            <choice>
+                <element label="Building" value="building"/>
+                <element label="Other Container" value="container"/>
+                <element label="Vehicle" value="vehicle"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element choice="3" default="unknown" label="Status" max_length="40" name="status" type="choice">
+            <choice>
+                <element label="Available" sequence="0" value="available"/>
+                <element label="Full" sequence="1" value="full"/>
+                <element label="Retired" sequence="2" value="retired"/>
+                <element label="Unknown" sequence="3" value="unknown"/>
+            </choice>
+        </element>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Transit Vehicle" max_length="32" name="transit_vehicle" reference="x_41751_thomas_s_b_transit_vehicle" type="reference"/>
+        <index name="index">
+            <element name="container"/>
+        </index>
+        <index name="index2">
+            <element name="location_building"/>
+        </index>
+        <index name="index3">
+            <element name="location"/>
+        </index>
+        <index name="index4">
+            <element name="transit_vehicle"/>
+        </index>
+    </element>
+</database>

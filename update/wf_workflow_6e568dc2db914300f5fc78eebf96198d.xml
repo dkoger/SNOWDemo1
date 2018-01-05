@@ -1,0 +1,1212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="wf_workflow_version">
+    <wf_workflow_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <activity_stages>{"subflows":[],"stages":{"cecec54adb914300f5fc78eebf961988":{"order":100,"stageId":"cecec54adb914300f5fc78eebf961988","duration":"","name":"Ready to Ship","value":"ready"},"42cec54adb914300f5fc78eebf961989":{"order":300,"stageId":"42cec54adb914300f5fc78eebf961989","duration":"","name":"Delivered","value":"delivered"},"c2cec54adb914300f5fc78eebf961989":{"order":300,"stageId":"c2cec54adb914300f5fc78eebf961989","duration":"","name":"Lost in Shippment","value":"lost"},"46cec54adb914300f5fc78eebf961989":{"order":200,"stageId":"46cec54adb914300f5fc78eebf961989","duration":"","name":"In Transit","value":"in_transit"}},"activities":{"82cec54adb914300f5fc78eebf961991":"46cec54adb914300f5fc78eebf961989","c6cec54adb914300f5fc78eebf961993":"46cec54adb914300f5fc78eebf961989","86cec54adb914300f5fc78eebf96198b":"46cec54adb914300f5fc78eebf961989","cecec54adb914300f5fc78eebf96198f":"cecec54adb914300f5fc78eebf961988","4ecec54adb914300f5fc78eebf96198a":"46cec54adb914300f5fc78eebf961989","46cec54adb914300f5fc78eebf96198e":"46cec54adb914300f5fc78eebf961989","06cec54adb914300f5fc78eebf961992":"46cec54adb914300f5fc78eebf961989","06cec54adb914300f5fc78eebf96198c":"c2cec54adb914300f5fc78eebf961989","82cec54adb914300f5fc78eebf96198d":"46cec54adb914300f5fc78eebf961989","cacec54adb914300f5fc78eebf961989":"42cec54adb914300f5fc78eebf961989"},"ends":["0acec54adb914300f5fc78eebf96198f"]}</activity_stages>
+        <after_business_rules>false</after_business_rules>
+        <checked_out/>
+        <checked_out_by/>
+        <column_renderer display_value="Workflow-driven">a56213111b030100adca1e094f0713ac</column_renderer>
+        <condition table="x_41751_thomas_s_b_tranfer">stage!=ready^EQ<item endquery="false" field="stage" goto="false" newquery="false" operator="!=" or="false" value="ready"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <condition_type>run_match</condition_type>
+        <description>Runs the lifecyle of a transfer to dictate process is followed</description>
+        <expected_sequences>cacec54adb914300f5fc78eebf961991,cecec54adb914300f5fc78eebf96198f,86cec54adb914300f5fc78eebf96198b,82cec54adb914300f5fc78eebf961991,46cec54adb914300f5fc78eebf96198e,06cec54adb914300f5fc78eebf961992,c6cec54adb914300f5fc78eebf961993,cacec54adb914300f5fc78eebf961989,4ecec54adb914300f5fc78eebf96198a,0acec54adb914300f5fc78eebf96198f,82cec54adb914300f5fc78eebf96198d,06cec54adb914300f5fc78eebf96198c</expected_sequences>
+        <expected_time>1970-01-01 14:00:00</expected_time>
+        <expected_time_type/>
+        <full_sequences>cacec54adb914300f5fc78eebf961991,cecec54adb914300f5fc78eebf96198f,86cec54adb914300f5fc78eebf96198b,82cec54adb914300f5fc78eebf961991,46cec54adb914300f5fc78eebf96198e,06cec54adb914300f5fc78eebf961992,c6cec54adb914300f5fc78eebf961993,cacec54adb914300f5fc78eebf961989,4ecec54adb914300f5fc78eebf96198a,0acec54adb914300f5fc78eebf96198f,82cec54adb914300f5fc78eebf96198d,06cec54adb914300f5fc78eebf96198c</full_sequences>
+        <journal/>
+        <max_activity_count>100</max_activity_count>
+        <name>Transfer Lifecycle</name>
+        <not_cacheable>false</not_cacheable>
+        <on_cancel><![CDATA[// This script executes if the workflow is cancelled.// The global variable context_sys_id contains the sys_id of the cancelled workflow context.]]></on_cancel>
+        <order>100</order>
+        <pin_type>set_by_activity</pin_type>
+        <published>true</published>
+        <relative_duration/>
+        <requires_ert>true</requires_ert>
+        <run_multiple>false</run_multiple>
+        <schedule/>
+        <stage_field>current_stage</stage_field>
+        <stage_order>user_specified</stage_order>
+        <start display_value="Begin">cacec54adb914300f5fc78eebf961991</start>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>02cec54adb914300f5fc78eebf961988</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:25:51</sys_updated_on>
+        <table>x_41751_thomas_s_b_tranfer</table>
+        <timezone/>
+        <validated>true</validated>
+        <workflow display_value="Transfer Lifecycle">6e568dc2db914300f5fc78eebf96198d</workflow>
+    </wf_workflow_version>
+    <wf_workflow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <description>Runs the lifecyle of a transfer to dictate process is followed</description>
+        <name>Transfer Lifecycle</name>
+        <preview/>
+        <sys_class_name>wf_workflow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 15:47:33</sys_created_on>
+        <sys_customer_update>true</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6e568dc2db914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Transfer Lifecycle</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Thomas's Book Depot" source="x_41751_thomas_s_b">487bafa9db190300f5fc78eebf9619b1</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Thomas's Book Depot">487bafa9db190300f5fc78eebf9619b1</sys_scope>
+        <sys_update_name>wf_workflow_6e568dc2db914300f5fc78eebf96198d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 15:47:33</sys_updated_on>
+        <table>x_41751_thomas_s_b_tranfer</table>
+        <template>false</template>
+        <vars/>
+    </wf_workflow>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Delivered</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>300</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>42cec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>delivered</value>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>In Transit</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>200</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>46cec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>in_transit</value>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Lost in Shippment</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>300</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>c2cec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>lost</value>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+    </wf_stage>
+    <wf_stage action="INSERT_OR_UPDATE">
+        <name>Ready to Ship</name>
+        <ola>1970-01-01 00:00:00</ola>
+        <order>100</order>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf961988</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>ready</value>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+    </wf_stage>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Begin">c7a5e32c0a0a0b3a002377c24ed8ea76</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>1</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>Begin</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cacec54adb914300f5fc78eebf961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>20</x>
+        <y>20</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=cacec54adb914300f5fc78eebf961991"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Begin">cacec54adb914300f5fc78eebf961991</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>8ecec54adb914300f5fc78eebf961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>9</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Delivered</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>06cec54adb914300f5fc78eebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>903</x>
+        <y>27</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=06cec54adb914300f5fc78eebf961992"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf961992</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf961992</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cacec54adb914300f5fc78eebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=delivered_to_destination^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf961992</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cacec54adb914300f5fc78eebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=delivered_to_destination^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf961992</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf961992</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Delivered">06cec54adb914300f5fc78eebf961992</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>42cec54adb914300f5fc78eebf961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Branch">a246173ac0a8016400a47421cd41e42c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>10</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Delivered?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4ecec54adb914300f5fc78eebf96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>734</x>
+        <y>156</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=4ecec54adb914300f5fc78eebf96198a"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Delivered?">4ecec54adb914300f5fc78eebf96198a</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>02cec54adb914300f5fc78eebf96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="End">c7a66f7d0a0a0b3a004544a6d2f14076</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>2</databus_lookup_id>
+        <height/>
+        <input/>
+        <is_parent>false</is_parent>
+        <name>End</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0acec54adb914300f5fc78eebf96198f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width>80</width>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>1355</x>
+        <y>155</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=0acec54adb914300f5fc78eebf96198f"/>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>4</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>In Transit</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>279</x>
+        <y>12</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=86cec54adb914300f5fc78eebf96198b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>86cec54adb914300f5fc78eebf96198b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0acec54adb914300f5fc78eebf96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=in_transit^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>86cec54adb914300f5fc78eebf96198b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0acec54adb914300f5fc78eebf96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=in_transit^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="In Transit">86cec54adb914300f5fc78eebf96198b</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>8ecec54adb914300f5fc78eebf96198b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>5</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Issues with Delivery</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>c6cec54adb914300f5fc78eebf961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>615</x>
+        <y>338</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=c6cec54adb914300f5fc78eebf961993"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c6cec54adb914300f5fc78eebf961993</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=pending_delivery^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>c6cec54adb914300f5fc78eebf961993</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=pending_delivery^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Issues with Delivery">c6cec54adb914300f5fc78eebf961993</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf961993</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>12</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Issues?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>46cec54adb914300f5fc78eebf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>437</x>
+        <y>229</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=46cec54adb914300f5fc78eebf96198e"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>46cec54adb914300f5fc78eebf96198e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0ecec54adb914300f5fc78eebf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=pending_delivery^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>46cec54adb914300f5fc78eebf96198e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>c6cec54adb914300f5fc78eebf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>46cec54adb914300f5fc78eebf96198e</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0ecec54adb914300f5fc78eebf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=pending_delivery^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>46cec54adb914300f5fc78eebf96198e</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>c6cec54adb914300f5fc78eebf96198e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Issues?">46cec54adb914300f5fc78eebf96198e</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>82cec54adb914300f5fc78eebf96198f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Branch">a246173ac0a8016400a47421cd41e42c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>13</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Issues?</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>82cec54adb914300f5fc78eebf961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>489</x>
+        <y>86</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=82cec54adb914300f5fc78eebf961991"/>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Issues?">82cec54adb914300f5fc78eebf961991</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>46cec54adb914300f5fc78eebf961991</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>11</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Lost</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="In Transit">46cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>82cec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>889</x>
+        <y>293</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=82cec54adb914300f5fc78eebf96198d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>82cec54adb914300f5fc78eebf96198d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>06cec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>82cec54adb914300f5fc78eebf96198d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=lost_in_transit^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>82cec54adb914300f5fc78eebf96198d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=lost_in_transit^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>82cec54adb914300f5fc78eebf96198d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>06cec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Lost">82cec54adb914300f5fc78eebf96198d</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf96198d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>8</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Lost in Transit</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Lost in Shippment">c2cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>06cec54adb914300f5fc78eebf96198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>1219</x>
+        <y>380</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=06cec54adb914300f5fc78eebf96198c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf96198c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf96198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=lost_in_transit^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>06cec54adb914300f5fc78eebf96198c</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf96198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=lost_in_transit^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Lost in Transit">06cec54adb914300f5fc78eebf96198c</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0ecec54adb914300f5fc78eebf96198c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Set Values">1ca8d7cf0a0a0b265e9a000c2c08248c</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>3</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Set Delivered</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Delivered">42cec54adb914300f5fc78eebf961989</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cacec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>1252</x>
+        <y>23</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=cacec54adb914300f5fc78eebf961989"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cacec54adb914300f5fc78eebf961989</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=delivered_to_destination^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cacec54adb914300f5fc78eebf961989</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf961989</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>stage=delivered_to_destination^EQ</value>
+        <variable display_value="">1cb38c8f0a0a0b266fb48e08de35f507</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Set Delivered">cacec54adb914300f5fc78eebf961989</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>46cec54adb914300f5fc78eebf96198a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_activity action="INSERT_OR_UPDATE">
+        <activity_definition display_value="Wait for condition">d93a02ae0a0a0aa30077abad3fdac035</activity_definition>
+        <activity_definition_updated>false</activity_definition_updated>
+        <databus_lookup_id>14</databus_lookup_id>
+        <height/>
+        <input>{}</input>
+        <is_parent>false</is_parent>
+        <name>Wait for Driver Acceptance</name>
+        <new_activity_definition/>
+        <notes/>
+        <out_of_date>false</out_of_date>
+        <parent/>
+        <pinned>false</pinned>
+        <pinned_version/>
+        <stage display_value="Ready to Ship">cecec54adb914300f5fc78eebf961988</stage>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf96198f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <timeout>1970-01-01 00:00:00</timeout>
+        <vars/>
+        <width/>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+        <x>127</x>
+        <y>144</y>
+    </wf_activity>
+    <sys_variable_value action="delete_multiple" query="document_key=cecec54adb914300f5fc78eebf96198f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cecec54adb914300f5fc78eebf96198f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>42cec54adb914300f5fc78eebf961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cecec54adb914300f5fc78eebf96198f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>accepted_byISNOTEMPTY^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cecec54adb914300f5fc78eebf96198f</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>accepted_byISNOTEMPTY^EQ</value>
+        <variable display_value="">c35dc4cd0a0a0ba96248a70990c1ac54</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>wf_activity</document>
+        <document_key>cecec54adb914300f5fc78eebf96198f</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>42cec54adb914300f5fc78eebf961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <value>// Set the variable 'answer' to true or false to indicate if the condition has been met or not.&#13;
+answer = true;&#13;
+</value>
+        <variable display_value="">c35debce0a0a0ba96248a709440cf31a</variable>
+    </sys_variable_value>
+    <wf_condition action="INSERT_OR_UPDATE">
+        <activity display_value="Wait for Driver Acceptance">cecec54adb914300f5fc78eebf96198f</activity>
+        <condition>true</condition>
+        <condition_default/>
+        <condition_type>standard</condition_type>
+        <else_flag>false</else_flag>
+        <error>false</error>
+        <event>false</event>
+        <event_name/>
+        <is_positive>true</is_positive>
+        <name>Always</name>
+        <order>0</order>
+        <short_description/>
+        <skip_during_generate>false</skip_during_generate>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0ecec54adb914300f5fc78eebf961990</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+    </wf_condition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">02cec54adb914300f5fc78eebf96198b</condition>
+        <from display_value="Delivered?">4ecec54adb914300f5fc78eebf96198a</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>02cec54adb914300f5fc78eebf9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Lost">82cec54adb914300f5fc78eebf96198d</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">cecec54adb914300f5fc78eebf96198d</condition>
+        <from display_value="Lost">82cec54adb914300f5fc78eebf96198d</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>0ecec54adb914300f5fc78eebf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Lost in Transit">06cec54adb914300f5fc78eebf96198c</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">82cec54adb914300f5fc78eebf96198f</condition>
+        <from display_value="Issues?">46cec54adb914300f5fc78eebf96198e</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>46cec54adb914300f5fc78eebf9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Issues with Delivery">c6cec54adb914300f5fc78eebf961993</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">0ecec54adb914300f5fc78eebf961990</condition>
+        <from display_value="Wait for Driver Acceptance">cecec54adb914300f5fc78eebf96198f</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="In Transit">86cec54adb914300f5fc78eebf96198b</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">46cec54adb914300f5fc78eebf961991</condition>
+        <from display_value="Issues?">82cec54adb914300f5fc78eebf961991</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Issues?">46cec54adb914300f5fc78eebf96198e</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">cecec54adb914300f5fc78eebf961993</condition>
+        <from display_value="Issues with Delivery">c6cec54adb914300f5fc78eebf961993</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>4acec54adb914300f5fc78eebf9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Delivered?">4ecec54adb914300f5fc78eebf96198a</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">8ecec54adb914300f5fc78eebf961991</condition>
+        <from display_value="Begin">cacec54adb914300f5fc78eebf961991</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>82cec54adb914300f5fc78eebf9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Wait for Driver Acceptance">cecec54adb914300f5fc78eebf96198f</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">0ecec54adb914300f5fc78eebf96198c</condition>
+        <from display_value="Lost in Transit">06cec54adb914300f5fc78eebf96198c</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="End">0acec54adb914300f5fc78eebf96198f</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">8ecec54adb914300f5fc78eebf96198b</condition>
+        <from display_value="In Transit">86cec54adb914300f5fc78eebf96198b</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>86cec54adb914300f5fc78eebf9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Issues?">82cec54adb914300f5fc78eebf961991</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">02cec54adb914300f5fc78eebf96198b</condition>
+        <from display_value="Delivered?">4ecec54adb914300f5fc78eebf96198a</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>8ecec54adb914300f5fc78eebf9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Delivered">06cec54adb914300f5fc78eebf961992</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">42cec54adb914300f5fc78eebf961993</condition>
+        <from display_value="Delivered">06cec54adb914300f5fc78eebf961992</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>c2cec54adb914300f5fc78eebf9619a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Set Delivered">cacec54adb914300f5fc78eebf961989</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">46cec54adb914300f5fc78eebf961991</condition>
+        <from display_value="Issues?">82cec54adb914300f5fc78eebf961991</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cacec54adb914300f5fc78eebf9619a2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="Delivered">06cec54adb914300f5fc78eebf961992</to>
+    </wf_transition>
+    <wf_transition action="INSERT_OR_UPDATE">
+        <condition display_value="Always">46cec54adb914300f5fc78eebf96198a</condition>
+        <from display_value="Set Delivered">cacec54adb914300f5fc78eebf961989</from>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>cecec54adb914300f5fc78eebf9619a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <to display_value="End">0acec54adb914300f5fc78eebf96198f</to>
+    </wf_transition>
+    <wf_estimated_runtime_config action="INSERT_OR_UPDATE">
+        <estimated_run_time/>
+        <no_of_data_points>1</no_of_data_points>
+        <percentage_threshold_ert>20</percentage_threshold_ert>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2017-09-20 16:24:23</sys_created_on>
+        <sys_id>82cec54adb914300f5fc78eebf961988</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2017-09-20 16:24:23</sys_updated_on>
+        <workflow_version display_value="Transfer Lifecycle">02cec54adb914300f5fc78eebf961988</workflow_version>
+    </wf_estimated_runtime_config>
+    <wf_workflow_version action="update_multiple" query="workflow=6e568dc2db914300f5fc78eebf96198d^sys_id!=02cec54adb914300f5fc78eebf961988">
+        <published>false</published>
+    </wf_workflow_version>
+</record_update>

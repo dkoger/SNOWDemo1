@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="material" table="x_41751_thomas_s_b_crate" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>material</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Steel</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sequence>0</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4559f0f1dbd90300f5fc78eebf9619d7</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+            <value>Steel</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>material</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Wood</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sequence>1</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c559f0f1dbd90300f5fc78eebf9619d8</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+            <value>Wood</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>material</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tyvex</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sequence>2</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8559f0f1dbd90300f5fc78eebf9619d9</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+            <value>Tyvex</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>material</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Plastic</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sequence>3</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4559f0f1dbd90300f5fc78eebf9619da</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+            <value>Plastic</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>material</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Concrete</label>
+            <language>en</language>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sequence>4</sequence>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0559f0f1dbd90300f5fc78eebf9619db</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+            <value>Concrete</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>material</element>
+            <name>x_41751_thomas_s_b_crate</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2017-09-19 20:12:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a5765ca40f23030026fb059ce1050efb</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_name>material</sys_name>
+            <sys_package display_value="Thomas's Book Depot" source="x_41751_thomas_s_b">487bafa9db190300f5fc78eebf9619b1</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Thomas's Book Depot">487bafa9db190300f5fc78eebf9619b1</sys_scope>
+            <sys_update_name>sys_choice_x_41751_thomas_s_b_crate_material</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2017-09-19 20:12:10</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

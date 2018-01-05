@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="x_41751_thomas_s_b_location" label="Transit Vehicle" max_length="40" name="x_41751_thomas_s_b_transit_vehicle" type="collection">
+        <element label="Latitude" max_length="40" name="latitude" type="string"/>
+        <element label="Longitude" max_length="40" name="longitude" type="string"/>
+        <element label="Responsible Contact" max_length="32" name="responsible_contact" reference="x_41751_thomas_s_b_contacts" type="reference"/>
+        <element choice="3" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Rail Car"/>
+                <element label="Ship"/>
+                <element label="Truck"/>
+            </choice>
+        </element>
+        <element display="true" label="Vehicle ID" max_length="40" name="vehicle_id" type="string"/>
+        <index name="index">
+            <element name="responsible_contact"/>
+        </index>
+    </element>
+</database>

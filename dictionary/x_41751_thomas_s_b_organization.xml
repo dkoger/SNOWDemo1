@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Organization" max_length="40" name="x_41751_thomas_s_b_organization" type="collection">
+        <element choice="1" label="Contract State" max_length="40" name="contract_state" type="choice">
+            <choice>
+                <element label="Contracted / Active" sequence="0" value="active"/>
+                <element label="Pending Contract" sequence="1" value="pending"/>
+                <element label="Inactive" sequence="2" value="inactive"/>
+            </choice>
+        </element>
+        <element label="Location" max_length="32" name="location" reference="x_41751_thomas_s_b_location_building" type="reference"/>
+        <element label="Name" max_length="40" name="name" type="string"/>
+        <element label="Primary Contact" max_length="32" name="primary_contact" reference="x_41751_thomas_s_b_contacts" type="reference"/>
+        <element label="Primary Phone" max_length="40" name="primary_phone" type="phone_number_e164"/>
+        <element choice="3" default="vendor" label="Type" max_length="40" name="type" type="choice">
+            <choice>
+                <element label="Maintenance" value="maintenance"/>
+                <element label="Restoration" value="restoration"/>
+                <element label="Shipping" value="shipping"/>
+                <element label="Thomas's Depot" value="depot"/>
+                <element label="Vendor" value="vendor"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="location"/>
+        </index>
+        <index name="index2">
+            <element name="primary_contact"/>
+        </index>
+    </element>
+</database>
